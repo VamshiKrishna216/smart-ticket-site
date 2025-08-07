@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tickity</title>
+  <link rel="stylesheet" href="home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="logo">Tickity</div>
+    <ul class="nav-links">
+      <!--<li><h2 text-align="center">Tickity</h2></li>-->
+      <!-- <li class="right"><a href="cart.html" class="btn-link">🛒 Cart</a></li> -->
+       <!-- Cart Icon with Notification Badge -->
+<li class="right">
+  <div class="cart-icon-container">
+    <a href="cart.html">
+      <img src="images/cart.jpg" alt="Cart" class="w-10 h-10" />
+      <span id="cart-badge" class="hidden">0</span>
+    </a>
+  </div>
+</li>
+  <style>
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  </style>
+
+      <li class="right"><button onclick="logout()">Logout</button></li>
+    </ul>
+  </nav>
+
+  <h1>Available Events</h1>
+
+  <div class="Events">
+    <div class="card">
+      <div class ="img-container">
+      <img src="https://etpub.s3.amazonaws.com/Events/Images/124434_02_15_2024_11_23_30.png" />
+      <button class="like-btn" onclick="toggleLike(this)">
+    <i class="fa-solid fa-heart"></i>
+    <span class="like-count">0</span>
+ </button>
+      </div>
+      <p><b>Hyderabad's biggest holi event</b></p>
+      <p>Rating: 4.5</p>
+      <p>Entry-Price: ₹100</p>
+      <p>Venue: Necklace Road, Hyderabad</p>
+      <p>Date: 15th March 2024</p>
+      <div class="button-container">
+      <button onclick="addToCart('Hyderabads biggest holi event', 100,'https://etpub.s3.amazonaws.com/Events/Images/124434_02_15_2024_11_23_30.png')">Add to Cart</button>
+      <button>Book</button>
+      </div>
+    </div>
+
+    <div class="card">
+    <div class ="img-container">
+    <img src="https://etpub.s3.amazonaws.com/Events/Images/158263_09_06_2024_03_07_44.png" />
+      </div>
+      <p><b>Dance Mahotsav</b></p>
+      <p>Rating: 4.2</p>
+      <p>Entry-Price: ₹80</p>
+      <p>Venue: uppal stadium, Hyderabad</p>
+      <p>Date: 20th March 2024</p>
+      <button onclick="addToCart('Dance Mahotsav', 80,'https://etpub.s3.amazonaws.com/Events/Images/158263_09_06_2024_03_07_44.png')">Add to Cart</button>
+    </div>
+    <div class="card">
+      <div class ="img-container">
+      <img src="https://livenewsgoa.com/wp-content/uploads/2023/09/1920X1080-jpg.webp" alt="sport1img" />
+      </div>
+      <p><b>India's best sports event</b></p>
+      <p>Rating: 4.7</p>
+      <p>Entry-Price: ₹120</p>
+      <p>Venue:uppal stadium,Hyderabad</p>
+      <p>Date:21st March 2024</p>
+      <button onclick="addToCart('Indias best sports event', 120,'https://livenewsgoa.com/wp-content/uploads/2023/09/1920X1080-jpg.webp')">Add to Cart</button>
+    </div>
+    <div class="card">
+      <div class ="img-container">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQhvQ2l3mZFyZB5p3TTqc3iFpPs7UYNDXEw&s" alt="sing1img" />
+      </div>
+      <p><b>Indias best singers event</b></p>
+      <p>Rating: 4.0</p>
+      <p>Price: ₹120</p>
+      <p>Venue:uppal stadium,Hyderabad</p>
+      <p>Date:25th March 2024</p>
+      <button onclick="addToCart('Indias best singers event', 70,'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwQhvQ2l3mZFyZB5p3TTqc3iFpPs7UYNDXEw&s')">Add to Cart</button>
+    </div>
+    <div class="card">
+      <div class ="img-container">
+      <img src="data:image/jpeg;base64,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" alt="Movie fair event" />
+      </div>
+      <p><b>Movie fair expo event</b></p>
+      <p>Rating: 4.1</p>
+      <p>Price: ₹100</p>
+      <p>Venue:uppal stadium,Hyderabad</p>
+        <p>Date:30th March 2024</p>
+      <button onclick="addToCart('Movie fair expo event', 30)">Add to Cart</button>
+    </div>
+
+  </div>
+
+  <script src="home.js"></script>
+   
+  
+
+</body>
+</html>
