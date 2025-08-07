@@ -118,8 +118,4 @@ This project is licensed under the **MIT License** — giving you freedom to use
 
 Need to talk shop—or just want to connect? Hit me up at **\[[vamshikrishnagovind@example.com](mailto:your-email@example.com)]** or open an issue on GitHub.
 
----
 
-### Final Thoughts
-
-Your README speaks volumes about your project and your professionalism. This version is clean, clear, and confidently laid out—poised to welcome users and contributors alike. Let me know if you'd like to tweak any section—like adding screenshots, deployment badges, or API specs.
