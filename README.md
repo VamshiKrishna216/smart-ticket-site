@@ -1,121 +1,69 @@
-## Smart Ticket Site
+# Smart Ticket Site
 
-Your one-stop, modern ticket purchase platform — sleek, intuitive, and robust.
+A full-stack ticket booking web application focused on a clean booking flow, responsive UI, and a separated frontend/backend architecture.
 
----
+## Overview
 
-### Overview
+Smart Ticket Site is an end-to-end web project for browsing ticket options, selecting a booking, and moving through a checkout-style workflow.
 
-**Smart Ticket Site** is a web application designed to simplify the ticket-buying process. Whether you're attending events, shows, or travel, this platform delivers a seamless, efficient, and beautiful checkout experience.
+### Highlights
 
----
+- Full-stack frontend and backend architecture
+- Responsive web interface
+- Ticket selection and booking workflow
+- API-oriented backend structure
+- Integration-ready data and payment flow
+- Clear separation between presentation and server logic
 
-### Table of Contents
+## Architecture
 
-1. [Features](#features)
-2. [Project Structure](#project-structure)
-3. [Installation & Setup](#installation--setup)
-4. [Usage](#usage)
-5. [Technologies Used](#technologies-used)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
-
----
-
-### Features
-
-* Full-stack architecture with decoupled **frontend** and **backend**
-* User-friendly, responsive interface across devices
-* Secure data handling and integration-ready API
-* Streamlined ticket selection, booking, and payment flow
-
----
-
-### Project Structure
-
-```
-root/
-├── .vscode/                # Workspace settings
-├── frontend/               # UI layer (HTML, CSS, JS)
-└── backend/                # Server logic, APIs, database integration
+```text
+smart-ticket-site/
+├── frontend/     # Web UI
+└── backend/      # Server, APIs and data layer
 ```
 
----
+## Tech
 
-### Installation & Setup
+- Frontend: HTML, CSS, JavaScript
+- Backend: Node.js / API layer
+- Deployment: adaptable to Docker and cloud hosting
 
-1. **Clone the repository**
+> Update the stack above if the implementation changes; keep this section aligned with the actual code.
 
-   ```bash
-   git clone https://github.com/VamshiKrishna216/smart-ticket-site.git
-   cd smart-ticket-site
-   ```
+## Running locally
 
-2. **Setup Backend**
+### Backend
 
-   ```bash
-   cd backend
-   # Install dependencies (adjust to your stack, e.g. npm or pip)
-   npm install
-   # Configure environment variables (e.g., database, API keys)
-   # Start the server
-   npm start
-   ```
+```bash
+cd backend
+npm install
+npm start
+```
 
-3. **Setup Frontend**
+### Frontend
 
-   ```bash
-   cd ../frontend
-   # Install dependencies (if required)
-   npm install
-   # Launch the UI
-   npm start
-   ```
+```bash
+cd frontend
+npm install
+npm start
+```
 
-   *Alternatively*, open `frontend/index.html` directly in your browser.
+Then open the local frontend URL printed by the development server.
 
----
+## Why I built it
 
-### Usage
+This project was built to practice real-world full-stack concerns: frontend/backend separation, API design, user flows, and deployment-ready project structure.
 
-* Navigate to `http://localhost:<frontend_port>` to access the site UI.
-* Explore ticket listings, select your preferences, and complete a test booking.
-* Visit `http://localhost:<backend_port>/api` to explore API endpoints (if documented).
+## Roadmap
 
----
+- Authentication
+- Persistent database storage
+- Real payment integration
+- Automated tests
+- Dockerized local development
+- CI/CD
 
-### Technologies Used
+## License
 
-* **Frontend**: HTML5, CSS3, JavaScript (mention any framework like React if used)
-* **Backend**: (e.g., Node.js, Express, Python Flask, Java Spring) – specify as per your project
-* **Database/Storage**: (mention DB like MongoDB, PostgreSQL, or local storage)
-* **Deployment Tools**: Docker, CI/CD pipelines, or hosting services (if applicable)
-
----
-
-### Contributing
-
-Contributions ignite growth. To pitch in:
-
-1. Fork the repo
-2. Create a branch: `git checkout -b feature/YourFeature`
-3. Commit your enhancements: `git commit -m "Add your feature"`
-4. Push to your branch: `git push origin feature/YourFeature`
-5. Open a pull request for review
-
-Thanks for helping build something meaningful!
-
----
-
-### License
-
-This project is licensed under the **MIT License** — giving you freedom to use, modify, and distribute. *Adjust as necessary*.
-
----
-
-### Contact
-
-Need to talk shop—or just want to connect? Hit me up at **\[[vamshikrishnagovind@example.com](mailto:your-email@example.com)]** or open an issue on GitHub.
-
-
+MIT
